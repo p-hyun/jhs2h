@@ -34,7 +34,7 @@ let pictureArr = [
 document.addEventListener("DOMContentLoaded", function(){
   pictureArr.forEach(function(src) {
     console.log(src);
-    let str =  `<div class="swiper-slide swiper-img"><img class="imgSrc" src=`+ src +`></div>`;
+    let str =  `<div class="swiper-slide swiper-img"><img class="imgSrc" src=`+ src +` style="oject-fit:cover;"></div>`;
      $(".wrapSwiper").append(str);
     let popStr = `<div class="swiper-slide popSwiperImg"><img class="imgSrc" src=`+ src +`></div>`;
     $(".wrapSwiperPop").append(popStr);
@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let img = e.target;
     let src = $(img).attr("src");
     let idx = pictureArr.findIndex(e => e == src);
-    alert(idx);
     swiper.slideTo(idx,200,false);
     fn_layer('layer01', 600);
   })
@@ -108,13 +107,13 @@ const swiper = new Swiper('.swiper', {
 
 
 //modal
-const btnOpenPopup = document.querySelector('.btn-open-popup');
 
 const layerPop = document.querySelector('.layerPop');
 
-btnOpenPopup.addEventListener('click', () => {
+layerPop.addEventListener('click', () => {
 // 뒷배경 비활성화시키기 
-  fn_layer('layer01', 600);
+  // fn_layer('layer01', 600);
+  $(".layerPop").css("display", block);
 });
 
 
