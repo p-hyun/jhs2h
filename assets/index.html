@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jeryyAndHyun</title>
     <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=28b9001d78f553496db897b63179f7d1"></script> -->
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js" integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL" crossorigin="anonymous"></script>
+    <script>
+    Kakao.init('28b9001d78f553496db897b63179f7d1'); // 사용하려는 앱의 JavaScript 키 입력
+    </script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -33,33 +37,42 @@
         가까이서 축복해 주시면 고맙겠습니다.<br>
     </div>
     <div>오시는길</div>
-    <!-- <div id="map" style="width:auto; height:400px;"></div> -->
+    <div id="map" style="width:auto; height:400px;"></div>
+    <button type="button" id="kakaoBtn">길안내하기</button>
     <div><a href="tel:010-2320-0647">신랑에게 연락하기</a></div>
     <div><a href="tel:010-4108-4864">신부에게 연락하기</a></div>
-    <div>혼주 연락처</div>
+    <div id="callParents">혼주 연락처</div>
 
     <div class="swiper-container">
         <div class="swiper-wrapper wrapSwiper"></div>
     </div>
 
        <!-- 레이어 팝업 -->
-       <div class="layerPop layer01">
-        <section class="inner">
-            <a href="javascript:void(0)"></a>
-            <div class="container">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper wrapSwiperPop"></div>
-                </div>
-        
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+       <div class="layerPop layer01" style="display: none;">
+        <div class="close">
+            <img class="closeBtn" src="../icon/cancel.png" alt="/icon/cancel.png">
+        </div>
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper wrapSwiperPop"></div>
             </div>
-        </section>
+    
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </div>
     <!-- // 레이어 팝업 -->
+
+    <div class="layerPop layer02" style="display: none;">
+        <div class="layer02Con">
+            <div>박채진</div>
+            <div>양육남</div>
+            <div>전형숙</div>
+        </div>
+    </div>
 
 </body>
 </html>

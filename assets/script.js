@@ -33,7 +33,6 @@ let pictureArr = [
 
 document.addEventListener("DOMContentLoaded", function(){
   pictureArr.forEach(function(src) {
-    console.log(src);
     let str =  `<div class="swiper-slide swiper-img"><img class="imgSrc" src=`+ src +` style="oject-fit:cover;"></div>`;
      $(".wrapSwiper").append(str);
     let popStr = `<div class="swiper-slide popSwiperImg"><img class="imgSrc" src=`+ src +`></div>`;
@@ -45,9 +44,20 @@ document.addEventListener("DOMContentLoaded", function(){
     let src = $(img).attr("src");
     let idx = pictureArr.findIndex(e => e == src);
     swiper.slideTo(idx,200,false);
-    fn_layer('layer01', 600);
+    $(".layer01").show();
+  })
+
+  $(".closeBtn").on("click", function(e) {
+    $(".layer01").hide();
   })
   
+  $("#callParents").on("click", function(e) {
+    $(".layer02").show();
+  })
+
+  $("#kakaoBtn").on("click", function(e) {
+    startNavigation();
+  })
 });
 
 const swiper = new Swiper('.swiper', {
@@ -86,34 +96,34 @@ const swiper = new Swiper('.swiper', {
   });
 
 
-// var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-// var options = { //지도를 생성할 때 필요한 기본 옵션
-//   center: new kakao.maps.LatLng(37.2617874, 127.0334682), //지도의 중심좌표.
-//   level: 4 //지도의 레벨(확대, 축소 정도)
-// };
+var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+var options = { //지도를 생성할 때 필요한 기본 옵션
+  center: new kakao.maps.LatLng(37.2617874, 127.0334682), //지도의 중심좌표.
+  level: 4 //지도의 레벨(확대, 축소 정도)
+};
   
   
-// var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
-// var markerPosition  = new kakao.maps.LatLng(37.2617874, 127.0334682); 
+var markerPosition  = new kakao.maps.LatLng(37.2617874, 127.0334682); 
 
-// // 마커를 생성합니다
-// var marker = new kakao.maps.Marker({
-//     position: markerPosition
-// });
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
 
-// // 마커가 지도 위에 표시되도록 설정합니다
-// marker.setMap(map);
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
 
 
-//modal
+modal
 
 const layerPop = document.querySelector('.layerPop');
 
 layerPop.addEventListener('click', () => {
 // 뒷배경 비활성화시키기 
   // fn_layer('layer01', 600);
-  $(".layerPop").css("display", block);
+  $(".layerPop").css("display", "block");
 });
 
 
@@ -136,5 +146,14 @@ function fn_layer(e,s) {
 function fn_layer_close(t){
 	$(t).closest(".inner").parent().fadeOut(200).removeClass("on");
 	$("body, html").removeAttr('style');
+}
+
+function startNavigation() {
+  Kakao.Navi.start({
+    name: '수원 파티움하우스',
+    x: 37.2617874,
+    y: 127.0334682,
+    coordType: 'wgs84',
+  });
 }
 
