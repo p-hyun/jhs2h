@@ -158,9 +158,9 @@ function fn_layer_close(t){
 function startNavigation() {
   Kakao.init('28b9001d78f553496db897b63179f7d1'); // 사용하려는 앱의 JavaScript 키 입력
   Kakao.Navi.start({
-    name: '현대백화점 판교점',
-    x: 127.11205203011632,
-    y: 37.39279717586919,
+    name: '수원 파티움하우스',
+    x: 127.0334682,
+    y: 37.2617874,
     coordType: 'wgs84',
   });
 }
