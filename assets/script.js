@@ -58,6 +58,13 @@ document.addEventListener("DOMContentLoaded", function(){
   $("#kakaoBtn").on("click", function(e) {
     startNavigation();
   })
+
+  $("#clip").on("click", function(e) {
+    window.navigator.clipboard.writeText("110333336763").then(() => {
+      // 복사가 완료되면 호출된다.
+      alert("복사되었습니다.");
+    });
+  })
 });
 
 const swiper = new Swiper('.swiper', {
