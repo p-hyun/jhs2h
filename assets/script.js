@@ -151,8 +151,8 @@ function fn_layer_close(t){
 function startNavigation() {
   Kakao.Navi.start({
     name: '수원 파티움하우스',
-    x: 37.2617874,
-    y: 127.0334682,
+    x: 37.26151772908532,
+    y: 126.570667,
     coordType: 'wgs84',
   });
 }
