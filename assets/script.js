@@ -43,7 +43,9 @@ document.addEventListener("DOMContentLoaded", function(){
     let img = e.target;
     let src = $(img).attr("src");
     let idx = pictureArr.findIndex(e => e == src);
-    swiper.slideTo(idx,200,false);
+    setTimeout(function(){
+      swiper.slideTo(idx,200,false);
+    }, 100);
     $(".layer01").show();
   })
 
@@ -73,8 +75,11 @@ const swiper = new Swiper('.swiper', {
       },
     // Optional parameters
     direction: 'horizontal',
+    autoHeight : true,
     loop: true,
-  
+    observer:true,
+    observeParents:true,
+    watchOverflow:true,
   
     // Navigation arrows
     navigation: {
@@ -159,8 +164,8 @@ function startNavigation() {
   Kakao.init('28b9001d78f553496db897b63179f7d1'); // 사용하려는 앱의 JavaScript 키 입력
   Kakao.Navi.start({
     name: '수원 파티움하우스',
-    x: 127.0334682,
-    y: 37.2617874,
+    x: 127.0335661114954,
+    y: 37.26182637051652,
     coordType: 'wgs84',
   });
 }

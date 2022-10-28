@@ -26,7 +26,7 @@
     <p class="address">2022년 11월 26일 토요일 오후 4시</p>
     <p class="address">파티움하우스 수원 3층 파티움홀</p>
     <img class="main" src="../img/0.jpg" alt="main" >
-    <div class="greetings">
+    <div class="greetings ani btt">
         두 사람이 사랑으로 만나<br>
         진실과 이해로써 하나를 이루려고 합니다.<br>
         저희 두사람을 아끼고 돌봐주신<br>
@@ -34,7 +34,7 @@
         바쁘신 가운데 두 사람의 장래를<br>
         가까이서 축복해 주시면 고맙겠습니다.<br>
     </div>
-    <div>오시는길</div>
+    <div class="ani btt">오시는길</div>
     <div id="map" style="width:auto; height:400px;"></div>
     <button type="button" id="kakaoBtn">길안내하기</button>
     <div><a href="tel:010-2320-0647">신랑에게 연락하기</a></div>
@@ -51,15 +51,19 @@
             <img class="closeBtn" src="../icon/cancel.png" alt="/icon/cancel.png">
         </div>
         <div class="container">
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper wrapSwiperPop"></div>
+
+            <div class="abs">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper wrapSwiperPop"></div>
+                </div>
+        
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-    
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+
         </div>
     </div>
     <!-- // 레이어 팝업 -->
@@ -71,6 +75,20 @@
             <div>전형숙</div>
         </div>
     </div>
+
+    <script>
+        $(window).on("scroll", function(){
+            let wt = $(window).scrollTop();
+            $(".ani").each(function(){
+                var ot = $(this).offset().top + 200;                
+                if(wt <= ot){
+                    $(this).addClass("on");
+                }else{
+                    $(this).removeClass("on");
+                }
+            })
+        })
+    </script>
 
 </body>
 </html>
