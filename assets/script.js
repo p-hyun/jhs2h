@@ -157,9 +157,9 @@ function fn_layer_close(t){
 
 function startNavigation() {
   Kakao.Navi.start({
-    name: '수원 파티움하우스',
-    x: 37.26151772908532,
-    y: 126.570667,
+    name: '현대백화점 판교점',
+    x: 127.11205203011632,
+    y: 37.39279717586919,
     coordType: 'wgs84',
   });
 }
