@@ -127,10 +127,8 @@ var marker = new kakao.maps.Marker({
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);
 
-function setDraggable(draggable) {
-  // 마우스 드래그로 지도 이동 가능여부를 설정합니다
-  map.setDraggable();    
-}
+map.setDraggable(false);
+map.setZoomable(false);
 
 
 
