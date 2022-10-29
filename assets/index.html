@@ -83,11 +83,13 @@
         <div class="swiper-wrapper wrapSwiper"></div>
     </div>
 
-    <div class="textTitle ani btt">오시는길</div>
-    <div id="map" style="width:auto; height:200px;"></div>
-    <div class="callBtn" onclick="location.href='tel:010-2320-0647'">
-        <img src="../icon/maps.png" class="callImg " alt="call">
-        <span class="callBtnSpan">카카오네비 연결하기</span>
+    <div>
+        <div class="textTitle ani btt">LOCATION</div>
+        <div id="map" style="width:auto; height:200px;"></div>
+        <div class="callBtn" id="kakaoBtn">
+            <img src="../icon/maps.png" class="callImg " alt="call">
+            <span class="callBtnSpan">카카오네비 연결하기</span>
+        </div>
     </div>
     
     <div class="textTitle">
@@ -129,13 +131,81 @@
         </div>
     </div>
 
-    <div class="layer02" style="display: none;">
+    <div class="layer02 groomLayer" style="display: none;">
         <div class="container">
-            <div class="close">
-                <img class="closeBtn" src="../icon/cancel_bk.png" alt="cancel_bk">
+            <div class="layer02Header">
+                <div class="close">
+                    <img class="closeBtn" src="../icon/cancel_bk.png" alt="cancel_bk">
+                </div>
             </div>
             <div class="contents">
+                <div class="unit">
+                    <div class="accountSpace">
+                        <span class="position">신랑</span>
+                        <span class="name">박재형</span>
+                    </div>
+                    <div class="accountSpace">
+                        <span class="accountName" style="background-color: yellow;">국민</span>
+                        <span class="accountNum">63290201366916</span>
+                        <button type="button" class="copyBtn" id="63290201366916">copy</button>
+                    </div>
+                </div>
+                <div class="unit">
+                    <div class="accountSpace">
+                        <span class="position">신랑 아버지</span>
+                        <span class="name">박채진</span>
+                    </div>
+                    <div class="accountSpace">
+                        <span class="accountName" style="background-color: blue; color: #fff;">우리</span>
+                        <span class="accountNum">1002442044981</span>
+                        <button type="button" class="copyBtn" id="1002442044981">copy</button>
+                    </div>
+                </div>
+                <div class="unit">
+                    <div class="accountSpace">
+                        <span class="position">신랑 어머니</span>
+                        <span class="name">양육남</span>
+                    </div>
+                    <div class="accountSpace">
+                        <span class="accountName" style="background-color: green; color: #fff;">농협</span>
+                        <span class="accountNum">3520679448773</span>
+                        <button type="button" class="copyBtn" id="3520679448773">copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="layer02 brideLayer" style="display: none;">
+        <div class="container">
+            <div class="layer02Header">
+                <div class="close">
+                    <img class="closeBtn" src="../icon/cancel_bk.png" alt="cancel_bk">
+                </div>
+            </div>
+            <div class="contents">
+                <div class="unit">
+                    <div class="accountSpace">
+                        <span class="position">신부</span>
+                        <span class="name">박현</span>
+                    </div>
+                    <div class="accountSpace">
+                        <span class="accountName" style="background-color: yellow;">국민</span>
+                        <span class="accountNum">94108486462</span>
+                        <button type="button" class="copyBtn" id="94108486462">copy</button>
+                    </div>
+                </div>
+                <div class="unit">
+                    <div class="accountSpace">
+                        <span class="position">신부 어머니</span>
+                        <span class="name">전형숙</span>
+                    </div>
+                    <div class="accountSpace">
+                        <span class="accountName" style="background-color: green; color: #fff;">농협</span>
+                        <span class="accountNum">63501151044881</span>
+                        <button type="button" class="copyBtn" id="63501151044881">copy</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

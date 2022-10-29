@@ -68,20 +68,29 @@ document.addEventListener("DOMContentLoaded", function(){
     startNavigation();
   })
 
-  $("#clip").on("click", function(e) {
-    window.navigator.clipboard.writeText("110333336763").then(() => {
+  $(".copyBtn").on("click", function(e) {
+    let account = e.target.id;
+    window.navigator.clipboard.writeText(account).then(() => {
       // 복사가 완료되면 호출된다.
       alert("복사되었습니다.");
     });
   })
 
   $("#accountGroom").on("click", function(e) {
-    startNavigation();
-    $(".layer02").show();
+    $(".groomLayer").show();
   })
 
-  $(".layer02 .closeBtn").on("click", function(e) {
-    $(".layer02").hide();
+  $("#accountBride").on("click", function(e) {
+    $(".brideLayer").show();
+  })
+
+
+  $(".groomLayer .closeBtn").on("click", function(e) {
+    $(".groomLayer").hide();
+  })
+
+  $(".brideLayer .closeBtn").on("click", function(e) {
+    $(".brideLayer").hide();
   })
 });
 

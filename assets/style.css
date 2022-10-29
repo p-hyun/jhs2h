@@ -34,7 +34,7 @@ div {padding: 60 0px;}
 
 .layerPop {display:none; position:fixed; top:0; left:0; z-index:1000; margin:0; width:100%; height:100%; background:#000; text-align:center; padding:30px 0; box-sizing: border-box;}
 .layerPop > .container {width: 100%; height: 100%; display: inline-block;}
-.layerPop .layerBody {display:flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
+.layerPop .layerBody {display:flex; align-items: center; justify-content: center; width: 100%; height: 105%;}
 .swiper-autoheight .swiper-wrapper {align-items: center !important;}
 .layer02Con {width: 80%; height: 80%; background-color: #fff; display: table-cell; vertical-align: middle;}
 
@@ -61,7 +61,17 @@ div {padding: 60 0px;}
 .imgText {display: flex; align-items:center; justify-content: center;}
 .brideParents {background-color: #eebae5; border-radius: 15px; font-family: 'Noto Sans KR', sans-serif; color: #fff; font-size: 14px; padding: 10px 0; margin: 10px 20px;}
 
-.textTitle {font-family:'Noto Serif KR', serif; font-weight: 500; font-size: 20px; margin: 30px 0; color: #777;}
+.textTitle {font-family:'Noto Serif KR', serif; font-weight: 500; font-size: 20px; margin: 50px 0; color: #777;}
 
 .layer02 {display:none; position:fixed; top:0; left:0; z-index:1000; margin:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.5); text-align:center; padding:30px 0; box-sizing: border-box;}
-.layer02 .container {width: 80%; height: 60%; display: inline-block; background-color: #fff; position: relative; top: 10%;}
+.layer02 .container {width: 80%; height: auto; display: inline-block; background-color: #fff; position: relative; top: 10%; border-radius: 12px;}
+.layer02Header {width: 100%; height: 60px;}
+.layer02 .contents {display: inline-block; font-family:'Noto Serif KR', serif;}
+.copyBtn {width: 60px; height: 24px; border: none; background-color: #cccccc; border-radius: 10px; font-weight: 500; font-family: 'Noto Sans KR', sans-serif; color: #fff; margin: 0 8px;}
+.position {font-weight: 400; font-size: 12px; color: #555555;}
+.name {font-weight: 600; color: #333;}
+.accountSpace {margin: 10px 0;}
+.accountName {border-radius: 8px; padding: 2px 8px; font-size: 12px; color: #555555; font-weight: 500;}
+.accountNum {color: #333; font-weight: 500; letter-spacing: 1px;}
+.unit {padding-bottom: 15px; margin-bottom: 15px; border-bottom: dashed #cccccc 0.5px;
+  }
