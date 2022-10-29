@@ -49,12 +49,19 @@ document.addEventListener("DOMContentLoaded", function(){
     $(".layer01").show();
   })
 
-  $(".closeBtn").on("click", function(e) {
+  $(".layer01 .closeBtn").on("click", function(e) {
     $(".layer01").hide();
   })
   
-  $("#callParents").on("click", function(e) {
-    $(".layer02").show();
+  $("#callParentBtn").on("click", function(e) {
+    if($(".parentsDiv").css("display") == "none") {
+      $(".arrow").html("▲");
+      $(".parentsDiv").show();
+    } else {
+      $(".arrow").html("▼");
+      $(".parentsDiv").hide();
+    }
+
   })
 
   $("#kakaoBtn").on("click", function(e) {
@@ -66,6 +73,15 @@ document.addEventListener("DOMContentLoaded", function(){
       // 복사가 완료되면 호출된다.
       alert("복사되었습니다.");
     });
+  })
+
+  $("#accountGroom").on("click", function(e) {
+    startNavigation();
+    $(".layer02").show();
+  })
+
+  $(".layer02 .closeBtn").on("click", function(e) {
+    $(".layer02").hide();
   })
 });
 
