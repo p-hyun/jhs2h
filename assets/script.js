@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(){
     $(".layer01").show();
   })
 
-  $(".layer01 .closeBtn").on("click", function(e) {
+  $(".layer01 .close").on("click", function(e) {
     $(".layer01").hide();
   })
   
