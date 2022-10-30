@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function(){
   })
 
   $(".closeSpace").on("click", function(e) {
-    $(".layer01").fadeIn(200).css("display", "none");
+    $(".layer01").fadeIn(200).hide();
     $("body, html").removeAttr('style');
   })
   
