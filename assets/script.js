@@ -47,16 +47,19 @@ document.addEventListener("DOMContentLoaded", function(){
       swiper.slideTo(idx,200,false);
     }, 100);
     $(".layer01").show();
+    $("body, html").css({"overflow":"hidden"});
   })
 
   $(".layer01 .close").on("click", function(e) {
     $(".layer01").hide();
+    $("body, html").removeAttr('style');
   })
   
   $("#callParentBtn").on("click", function(e) {
     if($(".parentsDiv").css("display") == "none") {
       $(".arrow").html("▲");
       $(".parentsDiv").show();
+
     } else {
       $(".arrow").html("▼");
       $(".parentsDiv").hide();
@@ -78,19 +81,23 @@ document.addEventListener("DOMContentLoaded", function(){
 
   $("#accountGroom").on("click", function(e) {
     $(".groomLayer").show();
+    $("body, html").css({"overflow":"hidden"});
   })
 
   $("#accountBride").on("click", function(e) {
     $(".brideLayer").show();
+    $("body, html").css({"overflow":"hidden"});
   })
 
 
   $(".groomLayer .closeBtn").on("click", function(e) {
     $(".groomLayer").hide();
+    $("body, html").removeAttr('style');
   })
 
   $(".brideLayer .closeBtn").on("click", function(e) {
     $(".brideLayer").hide();
+    $("body, html").removeAttr('style');
   })
 });
 
