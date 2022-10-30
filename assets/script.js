@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(){
     $("body, html").css({"overflow":"hidden"});
   })
 
-  $(".layer01 .close").on("click", function(e) {
+  $(".closeSpace").on("click", function(e) {
     $(".layer01").hide();
     $("body, html").removeAttr('style');
   })
