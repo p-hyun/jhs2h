@@ -46,12 +46,12 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(function(){
       swiper.slideTo(idx,200,false);
     }, 100);
-    $(".layer01").show();
+    $(".layer01").fadeIn(200).show();
     $("body, html").css({"overflow":"hidden"});
   })
 
   $(".closeSpace").on("click", function(e) {
-    $(".layer01").hide();
+    $(".layer01").fadeIn(200).hide();
     $("body, html").removeAttr('style');
   })
   
