@@ -28,7 +28,6 @@ div {padding: 60 0px;}
 .bd {width: 22%; border: 1px solid #999999; margin-top:2%; margin-bottom: 20%; text-align: left; margin-left: 0;}
 .main {width: 100%; margin-top: 5%; margin-bottom: 5%;}
 .address {margin-top: 0; margin-bottom: 0; font-family: 'Noto Serif KR', serif; font-weight: 400; color: #555555; font-size: 12pt;}
-.closeSpace {width: 100%; height: 60px; position: absolute; top: 0; z-index:3333;}
 .greetings {padding-top: 4%; padding-bottom: 4%; width:100%; text-align: center; font-family:'Noto Serif KR', serif; font-weight: 400; font-size: 10pt; color:#555555; line-height: 18pt; margin: 20px 0px;}
 .close {width: 30px; height: 30px; float: right; position: absolute; top:15px; right:15px; z-index: 7777;}
 .closeBtn {width: 100%; height: 100%; z-index: 7788;}
@@ -76,3 +75,8 @@ div {padding: 60 0px;}
 .accountNum {color: #333; font-weight: 500; letter-spacing: 1px;}
 .unit {padding-bottom: 15px; margin-bottom: 15px; border-bottom: dashed #cccccc 0.5px;
   }
+
+.targetAddress {margin: 10px 0px; font-family:'Noto Serif KR', serif; color: #777; font-weight: 500;}
+.guide {text-align: left; margin-top: 22px;}
+.guideTitle {font-family:'Noto Serif KR', serif; color:#555; font-weight: 500; font-size: 16px; margin-bottom: 6px; margin-top: 10px;}
+.guideContents {font-family:'Noto Serif KR', serif; color:#777; font-weight: 400; font-size: 14px;}

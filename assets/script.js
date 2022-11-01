@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(){
     $("body, html").css({"overflow":"hidden"});
   })
 
-  $(".closeSpace").on("click", function(e) {
+  $(".layer01Close").on("click", function(e) {
     e.stopPropagation();
     setTimeout(function() {
       $(".layer01").fadeIn(200).hide();
@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function(){
   $(".copyBtn").on("click", function(e) {
     let account = e.target.id;
     window.navigator.clipboard.writeText(account).then(() => {
-      // 복사가 완료되면 호출된다.
       alert("복사되었습니다.");
     });
   })
