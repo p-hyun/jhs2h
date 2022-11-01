@@ -51,8 +51,11 @@ document.addEventListener("DOMContentLoaded", function(){
   })
 
   $(".closeSpace").on("click", function(e) {
-    $(".layer01").fadeIn(200).hide();
-    $("body, html").removeAttr('style');
+    e.stopPropagation();
+    setTimeout(function() {
+      $(".layer01").fadeIn(200).hide();
+      $("body, html").removeAttr('style');
+    }, 100);
   })
   
   $("#callParentBtn").on("click", function(e) {
